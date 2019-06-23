@@ -1,9 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
-
+<ion-content padding>
+  <ion-list>
+    <img src="../../../assets/img/wastebin24.png">
+    
+    <ion-item>
+      <!-- <ion-label fixed></ion-label> -->
+      <ion-input type="text" [(ngModel)]="Username" placeholder="Username"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <!-- <ion-label fixed >Password</ion-label> -->
+      <ion-input type="password" [(ngModel)]="Password" placeholder="Password"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  <div text-center >
+    <ion-button expand ="full" shape="round" color="secondary" (click)="onlogin()">LOGIN</ion-button>
+  </div>
 </ion-content>

@@ -1,0 +1,52 @@
+<ion-header >
+  
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >หน้าแรก</ion-title>
+  
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+     <ion-col>
+       <ion-button  expand="block"  (click)="scanqrcodepageclick()" >
+          <ion-icon  name="trash"  ></ion-icon> &nbsp; 
+              เก็บขยะ
+       </ion-button>
+      </ion-col>
+    </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button  expand="block"   (click)="moneypageclick()" >
+        <ion-icon  name="logo-bitcoin" ></ion-icon> <p>ค่าจัดเก็บขยะ</p>
+    </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+     <ion-button  expand="block"  (click)="asmpageclick()"> 
+        <ion-icon  name="list-box"></ion-icon> &nbsp; ประเมิน
+    </ion-button>
+  </ion-col>
+  </ion-row>
+
+  <ion-row>
+  <ion-col >
+    <ion-button expand="block"   (click)="statisticpageclick()">
+        <ion-icon  name="stats" ></ion-icon>&nbsp;  สถิติ
+    </ion-button>
+  </ion-col>
+  </ion-row>
+  </ion-grid> 
+  
+   
+</ion-content>
+
+
+
+
