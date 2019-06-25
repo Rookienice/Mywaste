@@ -1,52 +1,94 @@
 <ion-header >
-  
-    <button ion-button menuToggle>
+  <ion-toolbar >
+  <button ion-button menuToggle> 
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title >หน้าแรก</ion-title>
+  </ion-toolbar>
   
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding > 
+ 
+     <ion-slides pager="true" autoplay="1000" speed =" 5000">
+        <ion-slide *ngFor="let slide of slides" >
+          <div class="slide-img-padding">
+            <img  [src]="slide.img">
+          </div>
+        </ion-slide>
+    </ion-slides>
+      
+<!-- <ion-grid>
+   <ion-row>
+     <ion-col col (click)="scanqrcodepageclick()"  >
+      <ion-card text-center padding >
+          <ion-icon name="trash" ></ion-icon>         
+        </ion-card>
+     </ion-col>
+      -->
+
+     <!-- <ion-col col (click)="moneypageclick()"  >
+      <ion-card text-center padding color="pastel1"  >
+        <ion-icon name="logo-bitcoin"></ion-icon>
+        ค่าจัดเก็บขยะ
+      </ion-card>
+   </ion-col>
+   </ion-row>
+
+     <ion-row>
+    <ion-col col (click)="asmpageclick()">
+       <ion-card text-center padding>
+         <ion-icon name="list-box"></ion-icon>
+        ประเมิน
+       </ion-card>
+    </ion-col>
+    <ion-col col (click)="statisticpageclick()">
+     <ion-card text-center padding>
+       <ion-icon name="stats"></ion-icon>
+      สถิติ
+     </ion-card>
+  </ion-col>
+  </ion-row>
+ </ion-grid> 
+  
+ 
+</ion-content>  -->
+
+
   <ion-grid>
     <ion-row>
-     <ion-col>
-       <ion-button  expand="block"  (click)="scanqrcodepageclick()" >
-          <ion-icon  name="trash"  ></ion-icon> &nbsp; 
-              เก็บขยะ
-       </ion-button>
+      <ion-col>
+        <div class="box green ">
+              <ion-icon name="trash" ></ion-icon>    
+          </div>
+      </ion-col>
+
+      <ion-col>
+       <div class="  box red">
+          <ion-icon name="trash" ></ion-icon> 
+       </div>
       </ion-col>
     </ion-row>
 
-  <ion-row>
-    <ion-col>
-      <ion-button  expand="block"   (click)="moneypageclick()" >
-        <ion-icon  name="logo-bitcoin" ></ion-icon> <p>ค่าจัดเก็บขยะ</p>
-    </ion-button>
-    </ion-col>
-  </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="  box red">
+          <ion-icon name="trash" ></ion-icon> 
+        </div>
+      </ion-col>
 
-  <ion-row>
-    <ion-col>
-     <ion-button  expand="block"  (click)="asmpageclick()"> 
-        <ion-icon  name="list-box"></ion-icon> &nbsp; ประเมิน
-    </ion-button>
-  </ion-col>
-  </ion-row>
+      <ion-col>
+        <div class="  box red">
+          <ion-icon name="trash" ></ion-icon> 
+        </div>
+      </ion-col>
+    </ion-row>
 
-  <ion-row>
-  <ion-col >
-    <ion-button expand="block"   (click)="statisticpageclick()">
-        <ion-icon  name="stats" ></ion-icon>&nbsp;  สถิติ
-    </ion-button>
-  </ion-col>
-  </ion-row>
-  </ion-grid> 
-  
-   
-</ion-content>
-
-
+     
+      
+    
+  </ion-grid>
+ </ion-content>
 
 
