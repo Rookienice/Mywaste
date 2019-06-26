@@ -1,86 +1,80 @@
+
 <ion-header >
   <ion-toolbar >
   <button ion-button menuToggle> 
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title >หน้าแรก</ion-title>
+    <ion-title center >หน้าแรก</ion-title>
   </ion-toolbar>
   
 </ion-header>
 
 
 <ion-content padding > 
- 
-     <ion-slides pager="true" autoplay="1000" speed =" 5000">
-        <ion-slide *ngFor="let slide of slides" >
-          <div class="slide-img-padding">
-            <img  [src]="slide.img">
-          </div>
+ <!--------------------------- slides โชว์ข่าว  ------------------------------->
+ <!-- <ion-card>
+     <ion-slides class="slide-img-padding" pager="true" autoplay="1000" speed =" 5000" >
+        <ion-slide *ngFor="let slide of slides"  >
+            <img  [src]="slide.img" > 
         </ion-slide>
     </ion-slides>
-      
-<!-- <ion-grid>
-   <ion-row>
-     <ion-col col (click)="scanqrcodepageclick()"  >
-      <ion-card text-center padding >
-          <ion-icon name="trash" ></ion-icon>         
-        </ion-card>
-     </ion-col>
-      -->
-
-     <!-- <ion-col col (click)="moneypageclick()"  >
-      <ion-card text-center padding color="pastel1"  >
-        <ion-icon name="logo-bitcoin"></ion-icon>
-        ค่าจัดเก็บขยะ
-      </ion-card>
-   </ion-col>
-   </ion-row>
-
-     <ion-row>
-    <ion-col col (click)="asmpageclick()">
-       <ion-card text-center padding>
-         <ion-icon name="list-box"></ion-icon>
-        ประเมิน
-       </ion-card>
-    </ion-col>
-    <ion-col col (click)="statisticpageclick()">
-     <ion-card text-center padding>
-       <ion-icon name="stats"></ion-icon>
-      สถิติ
-     </ion-card>
-  </ion-col>
-  </ion-row>
- </ion-grid> 
-  
- 
-</ion-content>  -->
+  </ion-card>    -->
+<ion-slides class="slide-padding" pager="false">
+  <ion-slide *ngFor="let story of topStories">
+    <div class="container">
+      <ion-img src="{{story.picture}}"></ion-img>
+                <h2 class="slidetitle">
+                    <span class="block">{{story.title}}</span>
+                </h2>
+                <p class="author">By {{story.author}}, 2h ago</p>
+    </div>
+  </ion-slide>
+  <div class="sub-headers">
+    <p>Latest News</p>
+  </div>
+</ion-slides>
 
 
+
+
+<!------------------------- button click page ------------------------->
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <div class="box green ">
-              <ion-icon name="trash" ></ion-icon>    
+      <ion-col (click)="collectmoneyclick()" text-center>
+        <div class="box green " text-center>
+          <ion-icon name="trash"  color="light"></ion-icon>  <br>  
+            <ion-text color="light"> 
+               เก็บขยะ 
+             </ion-text>
           </div>
       </ion-col>
 
-      <ion-col>
-       <div class="  box red">
-          <ion-icon name="trash" ></ion-icon> 
+      <ion-col (click)="moneyclick()">
+        <div class="  box red" text-center>
+          <ion-icon name="logo-bitcoin" color="light" ></ion-icon> <br>
+            <ion-text color="light"> 
+               ค่าเก็บขยะ
+            </ion-text>
        </div>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col>
-        <div class="  box red">
-          <ion-icon name="trash" ></ion-icon> 
+      <ion-col (click)="assessmentclick()">
+        <div class="  box red" text-center>
+          <ion-icon name="list-box" color="light" ></ion-icon> <br>
+            <ion-text color="light"> 
+              ประเมิน
+            </ion-text>
         </div>
       </ion-col>
 
-      <ion-col>
-        <div class="  box red">
-          <ion-icon name="trash" ></ion-icon> 
+      <ion-col (click)="statisticclick()">
+        <div class="  box red" text-center>
+          <ion-icon name="stats"  color="light"></ion-icon> <br>
+            <ion-text color="light"> 
+              สถิติ
+            </ion-text>
         </div>
       </ion-col>
     </ion-row>

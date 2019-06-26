@@ -27,10 +27,10 @@ footer {
    background-color: rgba(175, 186, 202, 1);
 }
 .box {
-   border-radius: 5px;
-   padding: 3em;
-   margin-left: 5px;
-   margin-right: 5px;
+   border-radius: 5px;  //กรอบปุ่ม
+   padding: 1em;    //ขนาดปุ่ม
+  //  margin-left: px; 
+  //  margin-right: px;
    flex: 1 1 300px;
    h2 {
       font-weight: bold;
